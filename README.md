@@ -1,0 +1,8 @@
+# Targetlynxs-auto-processing
+A programing tool for processing LC-MS/MS data.
+
+The analysis of LC-MS / MS data is a very tough and error-prone task, when analyzing the huge number of samples and compounds.TargetLynxs, an application developed by waters, is a very useful tool automating the acquisition of sample data, chromatogram analysis and output of the data.However, a great deal of effort is still required to correct and process the data output from TargetLynxs according to each purpose. This tool not only enables rearranging of the raw data output from TargetLynxs into a form that can be easily processed on Excel, but also enables the correction of the peak area for standards, blanks, tissue weights, and calculates the average and SD of each sample according to each purpose. The code was written in python and the module adopted openpyxl, which can easily rewrite values on excel.
+
+rearrange_raw_data creates a sample × compound table by rearranging the data output from TargetLynxs.Rearranged should be done by rearrange_raw_data_ (auto-processing) when the correction for blanks, standards, tissue weight and calculation of average, and SD are needed. In order to make it easy for users to make modifications according to their purposes, the code for processing after rearrangeing was made by a combination of functions in process_library. In fix_and_calculate, each value will be corrected by standard, blank and tissue weight, The average and SD are calculated for each sample type.
+
+I hoped that this tool will help to improve the efficiency of LC-MS / MS data analysis, and that further improvements will be made by volunteers.
